@@ -61,6 +61,23 @@ Para rodar o projeto localmente em sua máquina Windows:
    flutter run -d windows
    ```
 
+## 📦 Distribuição (Instalador Windows)
+
+O projeto está configurado para gerar um instalador nativo do Windows (.msix).
+
+1.  **Gerar Ícones**: (Já realizado)
+    ```powershell
+    flutter pub run flutter_launcher_icons
+    ```
+2.  **Gerar Instalador**:
+    ```powershell
+    flutter build windows
+    ```
+    ```powershell
+    flutter pub run msix:create
+    ```
+    O instalador será gerado na pasta `build\windows\runner\Release\`.
+
 ---
 
 ## 👨‍💻 Créditos
