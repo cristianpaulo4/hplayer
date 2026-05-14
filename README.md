@@ -76,7 +76,19 @@ O projeto está configurado para gerar um instalador nativo do Windows (.msix).
     ```powershell
     flutter pub run msix:create
     ```
-    O instalador será gerado na pasta `build\windows\runner\Release\`.
+    O instalador será gerado na pasta `build\windows\x64\runner\Release\`.
+
+### ⚠️ Nota sobre o Certificado (Importante)
+
+Como este é um projeto de estudo, o instalador utiliza um certificado auto-assinado. Se o Windows impedir a instalação, siga estes passos:
+
+1. Clique com o **botão direito** no arquivo `.msix` -> **Propriedades**.
+2. Aba **Assinaturas Digitais** -> Selecione o item -> **Detalhes**.
+3. Clique em **Exibir Certificado** -> **Instalar Certificado**.
+4. Escolha **Máquina Local** -> Avançar.
+5. Selecione **"Colocar todos os certificados no seguinte repositório"**.
+6. Clique em **Procurar** e selecione **Autoridades de Certificação Raiz Confiáveis**.
+7. Avance e conclua. Agora o instalador estará liberado!
 
 ---
 
